@@ -154,8 +154,35 @@ export default function UUIDWordle() {
                   <DialogHeader>
                     <DialogTitle>How to Play UUID Wordle</DialogTitle>
                     <DialogDescription>
-                      {/* your dialog content remains here */}
-                    </DialogDescription>
+                    <p className="mt-2">Guess the UUID in 5 tries. Each guess must be a valid UUID format.</p>
+                    <p className="mt-2">
+                      After each guess, the color of the tiles will change to show how close your guess was:
+                    </p>
+                    <div className="mt-2 space-y-2">
+                      <div className="flex items-center gap-2">
+                        <div className="h-6 w-6 bg-green-500 rounded flex items-center justify-center text-black font-bold">
+                          a
+                        </div>
+                        <span>Correct character in the correct position</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="h-6 w-6 bg-yellow-500 rounded flex items-center justify-center text-black font-bold">
+                          b
+                        </div>
+                        <span>Correct character in the wrong position</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="h-6 w-6 bg-gray-300 rounded flex items-center justify-center text-gray-700 font-bold">
+                          c
+                        </div>
+                        <span>Character not in the UUID</span>
+                      </div>
+                    </div>
+                    <p className="mt-2">
+                      The hyphens (-) are pre-placed for you. Focus on guessing the hex characters.
+                    </p>
+                    <p className="mt-2">You can use your keyboard to type directly into the game!</p>
+                  </DialogDescription>
                   </DialogHeader>
                 </DialogContent>
               </Dialog>
